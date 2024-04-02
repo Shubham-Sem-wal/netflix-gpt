@@ -16,3 +16,8 @@
 - deploying the project
 
 - create sign up user account
+- implement sign in user api
+- created our redux store with userSlice
+- implemented sign out
+
+- used various firebase api's for authentication (createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile )
