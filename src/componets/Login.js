@@ -3,15 +3,13 @@ import Header from './Header'
 import { checkValidData } from '../utils/validate';
 import {createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile } from "firebase/auth";
 import {auth} from "../utils/firebase"
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { BACKGROUND_IMG } from '../utils/constants';
 
 const Login = () => {
 
-    const navigate = useNavigate();
     const dispatch = useDispatch();
-
     const [isSignIn , setIsSignIn] = useState(true);
     const [errorMsg , setErrorMsg] = useState(null);
 
@@ -53,7 +51,6 @@ const Login = () => {
                                 photoURL:photoURL
                             })
                             );
-                        navigate("/browse");
                       }).catch((error) => {
                         setErrorMsg(error.message);
                       });
@@ -72,8 +69,6 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    console.log(user);
-                    navigate("/browse");
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -89,12 +84,12 @@ const Login = () => {
     <div>
         <Header/>
         <div className='absolute'>
-            <img src="https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_large.jpg" 
+            <img src={BACKGROUND_IMG}
             alt="background-img" />
         </div>
         <form 
             onSubmit={(e) => e.preventDefault()} 
-            className='absolute w-3/12 p-12 bg-black mx-auto my-36 right-0 left-0 text-white bg-opacity-80'>
+            className='absolute w-3/12 p-12 bg-black mx-auto my-36 right-0 left-0 text-white bg-opacity-80 rounded-3xl'>
             <h1 className='text-3xl ml-3 mb-4 font-bold'>{ isSignIn ? "Sign In":"Sign Up"}</h1>
             {
                !isSignIn && 
