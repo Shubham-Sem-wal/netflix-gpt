@@ -23,8 +23,8 @@
 - used various firebase api's for authentication (createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile )
 
 
-# building browse page \
-    -browse page contain two component <mainContainer/> <secondaryContainer/>
+# building browse page 
+    - browse page contain two component <mainContainer/> <secondaryContainer/>
     - (1)
     - using TMDB api
     - got token key by registring to TMDB
@@ -41,5 +41,5 @@
     - fetched trailer video for particular movie using movie Id
     - created custom hook for the above and update the store
     - embeded the youtube youtube and make it autoplay and mute
-    
+
 
