@@ -40,6 +40,20 @@
     - mainContainer contains two components <videoTitle/> <videoBackground/>
     - fetched trailer video for particular movie using movie Id
     - created custom hook for the above and update the store
-    - embeded the youtube youtube and make it autoplay and mute
+    - embeded the youtube video and make it autoplay and mute
+
+    -(4)
+    - building secondary component...
+      - add sections - now_playing_movies
+                     - popular_movies
+                     - top_rated_movies
+                     - upcoming_movies
+        - built diffrent custom hooks as required.
+
+      
+
+
+
+                
 
 
