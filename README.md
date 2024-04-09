@@ -50,6 +50,11 @@
                      - upcoming_movies
         - built diffrent custom hooks as required.
 
+
+ - building GPT search functionality...
+        - built gpt-search page
+        - multilingual functionality
+
       
 
 
